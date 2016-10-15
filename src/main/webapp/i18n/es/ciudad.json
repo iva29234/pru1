@@ -1,0 +1,26 @@
+{
+    "pru1App": {
+        "ciudad" : {
+            "home": {
+                "title": "Ciudads",
+                "createLabel": "Crear nuevo Ciudad",
+                "createOrEditLabel": "Crear o editar Ciudad",
+                "search": "Search for Ciudad"
+            },
+            "created": "Un nuevo Ciudad ha sido creado con el identificador {{ param }}",
+            "updated": "Un Ciudad ha sido actualizado con el identificador {{ param }}",
+            "deleted": "Un Ciudad ha sido eliminado con el identificador {{ param }}",
+            "delete": {
+                "question": "¿Seguro que quiere eliminar Ciudad {{ id }}?"
+            },
+            "detail": {
+                "title": "Ciudad"
+            },
+            "codCiudad": "Cod Ciudad",
+            "nombre": "Nombre",
+            "cantidad": "Cantidad",
+            "ano": "Ano",
+            "pais": "Pais"
+        }
+    }
+}

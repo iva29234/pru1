@@ -1,0 +1,8 @@
+com/mycompany/myapp/service/UserServiceIntTest.class
+com/mycompany/myapp/web/rest/AuditResourceIntTest.class
+com/mycompany/myapp/web/rest/TestUtil.class
+com/mycompany/myapp/security/SecurityUtilsUnitTest.class
+com/mycompany/myapp/web/rest/PaisResourceIntTest.class
+com/mycompany/myapp/web/rest/UserResourceIntTest.class
+com/mycompany/myapp/web/rest/CiudadResourceIntTest.class
+com/mycompany/myapp/web/rest/AccountResourceIntTest.class

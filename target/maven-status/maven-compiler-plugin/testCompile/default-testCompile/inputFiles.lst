@@ -1,0 +1,8 @@
+/home/ubuntu/PRUEBAS/pru1/src/test/java/com/mycompany/myapp/service/UserServiceIntTest.java
+/home/ubuntu/PRUEBAS/pru1/src/test/java/com/mycompany/myapp/web/rest/PaisResourceIntTest.java
+/home/ubuntu/PRUEBAS/pru1/src/test/java/com/mycompany/myapp/web/rest/UserResourceIntTest.java
+/home/ubuntu/PRUEBAS/pru1/src/test/java/com/mycompany/myapp/web/rest/AuditResourceIntTest.java
+/home/ubuntu/PRUEBAS/pru1/src/test/java/com/mycompany/myapp/web/rest/AccountResourceIntTest.java
+/home/ubuntu/PRUEBAS/pru1/src/test/java/com/mycompany/myapp/web/rest/CiudadResourceIntTest.java
+/home/ubuntu/PRUEBAS/pru1/src/test/java/com/mycompany/myapp/web/rest/TestUtil.java
+/home/ubuntu/PRUEBAS/pru1/src/test/java/com/mycompany/myapp/security/SecurityUtilsUnitTest.java

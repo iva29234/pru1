@@ -1,0 +1,66 @@
+<div>
+    <h2 translate="pru1App.ciudad.home.title">Ciudads</h2>
+    <jhi-alert></jhi-alert>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-4 no-padding-left">
+                <button class="btn btn-primary" ui-sref="ciudad.new" >
+                    <span class="glyphicon glyphicon-plus"></span>
+                    <span  translate="pru1App.ciudad.home.createLabel">
+                        Create new Ciudad
+                    </span>
+                </button>
+            </div>
+        </div>
+    </div>
+    <br/>
+    <div class="table-responsive">
+        <table class="jh-table table table-striped">
+            <thead>
+                <tr jh-sort="vm.predicate" ascending="vm.reverse" callback="vm.reset()">
+                    <th jh-sort-by="id"><span translate="global.field.id">ID</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="codCiudad"><span translate="pru1App.ciudad.codCiudad">Cod Ciudad</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="nombre"><span translate="pru1App.ciudad.nombre">Nombre</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="cantidad"><span translate="pru1App.ciudad.cantidad">Cantidad</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="ano"><span translate="pru1App.ciudad.ano">Ano</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="pais.paisNombre"><span translate="pru1App.ciudad.pais">Pais</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody infinite-scroll="vm.loadPage(vm.page + 1)" infinite-scroll-disabled="vm.page >= vm.links['last']">
+                <tr ng-repeat="ciudad in vm.ciudads track by ciudad.id">
+                    <td><a ui-sref="ciudad-detail({id:ciudad.id})">{{ciudad.id}}</a></td>
+                    <td>{{ciudad.codCiudad}}</td>
+                    <td>{{ciudad.nombre}}</td>
+                    <td>{{ciudad.cantidad}}</td>
+                    <td>{{ciudad.ano}}</td>
+                    <td>
+                        <a ui-sref="pais-detail({id:ciudad.pais.id})">{{ciudad.pais.paisNombre}}</a>
+                    </td>
+                    <td class="text-right">
+                        <div class="btn-group flex-btn-group-container">
+                            <button type="submit"
+                                    ui-sref="ciudad-detail({id:ciudad.id})"
+                                    class="btn btn-info btn-sm">
+                                <span class="glyphicon glyphicon-eye-open"></span>
+                                <span class="hidden-xs hidden-sm" translate="entity.action.view"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="ciudad.edit({id:ciudad.id})"
+                                    class="btn btn-primary btn-sm">
+                                <span class="glyphicon glyphicon-pencil"></span>
+                                <span class="hidden-xs hidden-sm" translate="entity.action.edit"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="ciudad.delete({id:ciudad.id})"
+                                    class="btn btn-danger btn-sm">
+                                <span class="glyphicon glyphicon-remove-circle"></span>
+                                <span class="hidden-xs hidden-sm" translate="entity.action.delete"></span>
+                            </button>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

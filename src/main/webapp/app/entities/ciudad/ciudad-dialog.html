@@ -1,0 +1,70 @@
+
+<form name="editForm" role="form" novalidate ng-submit="vm.save()" show-validation>
+
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                ng-click="vm.clear()">&times;</button>
+        <h4 class="modal-title" id="myCiudadLabel" translate="pru1App.ciudad.home.createOrEditLabel">Create or edit a Ciudad</h4>
+    </div>
+    <div class="modal-body">
+        <jhi-alert-error></jhi-alert-error>
+        <div class="form-group" ng-show="vm.ciudad.id">
+            <label for="id" translate="global.field.id">ID</label>
+            <input type="text" class="form-control" id="id" name="id"
+                    ng-model="vm.ciudad.id" readonly />
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="pru1App.ciudad.codCiudad" for="field_codCiudad">Cod Ciudad</label>
+            <input type="number" class="form-control" name="codCiudad" id="field_codCiudad"
+                    ng-model="vm.ciudad.codCiudad"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="pru1App.ciudad.nombre" for="field_nombre">Nombre</label>
+            <input type="text" class="form-control" name="nombre" id="field_nombre"
+                    ng-model="vm.ciudad.nombre"
+                    required ng-minlength="3" ng-maxlength="20" />
+            <div ng-show="editForm.nombre.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.nombre.$error.required" translate="entity.validation.required">
+                    This field is required.
+                </p>
+                <p class="help-block"
+                    ng-show="editForm.nombre.$error.minlength" translate="entity.validation.minlength" translate-value-min="3">
+                    This field is required to be at least 3 characters.
+                </p>
+                <p class="help-block"
+                    ng-show="editForm.nombre.$error.maxlength" translate="entity.validation.maxlength" translate-value-max="20">
+                    This field cannot be longer than 20 characters.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="pru1App.ciudad.cantidad" for="field_cantidad">Cantidad</label>
+            <input type="number" class="form-control" name="cantidad" id="field_cantidad"
+                    ng-model="vm.ciudad.cantidad"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="pru1App.ciudad.ano" for="field_ano">Ano</label>
+            <input type="number" class="form-control" name="ano" id="field_ano"
+                    ng-model="vm.ciudad.ano"
+                     />
+        </div>
+
+        <div class="form-group">
+            <label translate="pru1App.ciudad.pais" for="field_pais">Pais</label>
+            <select class="form-control" id="field_pais" name="pais" ng-model="vm.ciudad.pais" ng-options="pais as pais.paisNombre for pais in vm.pais track by pais.id">
+                <option value=""></option>
+            </select>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="vm.clear()">
+            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span translate="entity.action.cancel">Cancel</span>
+        </button>
+        <button type="submit" ng-disabled="editForm.$invalid || vm.isSaving" class="btn btn-primary">
+            <span class="glyphicon glyphicon-save"></span>&nbsp;<span translate="entity.action.save">Save</span>
+        </button>
+    </div>
+</form>

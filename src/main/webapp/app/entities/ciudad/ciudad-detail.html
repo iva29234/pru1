@@ -1,0 +1,34 @@
+
+<div>
+    <h2><span translate="pru1App.ciudad.detail.title">Ciudad</span> {{vm.ciudad.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="dl-horizontal jh-entity-details">
+        <dt><span translate="pru1App.ciudad.codCiudad">Cod Ciudad</span></dt>
+        <dd>
+            <span>{{vm.ciudad.codCiudad}}</span>
+        </dd>
+        <dt><span translate="pru1App.ciudad.nombre">Nombre</span></dt>
+        <dd>
+            <span>{{vm.ciudad.nombre}}</span>
+        </dd>
+        <dt><span translate="pru1App.ciudad.cantidad">Cantidad</span></dt>
+        <dd>
+            <span>{{vm.ciudad.cantidad}}</span>
+        </dd>
+        <dt><span translate="pru1App.ciudad.ano">Ano</span></dt>
+        <dd>
+            <span>{{vm.ciudad.ano}}</span>
+        </dd>
+        <dt><span translate="pru1App.ciudad.pais">Pais</span></dt>
+        <dd>
+            <a ui-sref="pais-detail({id:vm.ciudad.pais.id})">{{vm.ciudad.pais.paisNombre}}</a>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            onclick="window.history.back()"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span translate="entity.action.back"> Back</span>
+    </button>
+</div>

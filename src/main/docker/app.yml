@@ -1,0 +1,16 @@
+version: '2'
+services:
+    pru1-app:
+        image: pru1
+        external_links:
+            - pru1-postgresql:postgresql
+        environment:
+            - SPRING_PROFILES_ACTIVE=prod
+            - SPRING_DATASOURCE_URL=jdbc:postgresql://postgresql:5432/pru1
+            - JHIPSTER_SLEEP=10 # gives time for the database to boot before the application
+        ports:
+            - 8080:8080
+    pru1-postgresql:
+        extends:
+            file: postgresql.yml
+            service: pru1-postgresql

@@ -1,0 +1,45 @@
+{
+  "relationships": [
+    {
+      "relationshipId": 1,
+      "relationshipType": "many-to-one",
+      "relationshipName": "pais",
+      "otherEntityName": "pais",
+      "otherEntityField": "paisNombre"
+    }
+  ],
+  "fields": [
+    {
+      "fieldId": 1,
+      "fieldName": "codCiudad",
+      "fieldType": "Long"
+    },
+    {
+      "fieldId": 2,
+      "fieldName": "nombre",
+      "fieldType": "String",
+      "fieldValidateRules": [
+        "required",
+        "minlength",
+        "maxlength"
+      ],
+      "fieldValidateRulesMinlength": 3,
+      "fieldValidateRulesMaxlength": 20
+    },
+    {
+      "fieldId": 3,
+      "fieldName": "cantidad",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldId": 4,
+      "fieldName": "ano",
+      "fieldType": "Integer"
+    }
+  ],
+  "changelogDate": "20161004171804",
+  "dto": "no",
+  "pagination": "infinite-scroll",
+  "service": "no",
+  "entityTableName": "ciudad"
+}

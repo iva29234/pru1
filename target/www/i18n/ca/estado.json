@@ -1,0 +1,10 @@
+{
+    "pru1App": {
+        "Estado" : {
+            "null": "",
+            "ACTIVO": "ACTIVO",
+            "BAJA": "BAJA",
+            "DESACTIVADO": "DESACTIVADO"
+        }
+    }
+}
